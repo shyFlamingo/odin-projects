@@ -1,0 +1,57 @@
+body{
+    text-align: center;
+    font-family: Arial;
+    font-size: small;
+    color: #222;
+}
+
+
+#left-head{
+    float: left;
+}
+
+#right-head{
+    float: right;
+}
+
+.logo-image{
+    height: 92px;
+    width: 272;
+    margin-top: 109px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-button, .lucky-button{
+    border-radius: 2px;
+    margin: 0 2 2 2;
+    height: 45px;
+    font-weight: bold;
+    border: 1px solid #f2f2f2;
+    background: #e8e7e7;
+    color: #7b7979;
+    width: 150;
+}
+
+form{
+    padding: 12px;
+    margin: 25;
+}
+
+#search{
+    padding: 12px;
+    border: 1px solid #bdbcbc;
+    margin: 0 100 0 100;
+    box-shadow: 2px 2px #e8e8e8;
+    width: 40%;
+    background-image: url(https://mayaru.github.io/google.com-the-remake/images/mic.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 25px;
+}
+
+nav ul li{
+    display: inline;
+    padding: 10px;
+}
+
