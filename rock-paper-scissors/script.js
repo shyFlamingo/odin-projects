@@ -4,9 +4,9 @@
 function playGame(){
   for( i = 0; i < 5; i ++ )
   {
-    computer = computerPlay();
-    playerChoice = prompt( 'Rock, Paper, or Scissors?');
-    console.log(playRound(playerChoice, computer));
+    //computer = computerPlay();
+    //playerChoice = prompt( 'Rock, Paper, or Scissors?');
+    //console.log(playRound(playerChoice, computer));
   }
 }
 
@@ -17,8 +17,9 @@ function computerPlay()
 }
 
 //plays a round of rock paper scissors 
-function playRound(playerChoice, computerChoice)
+function playRound(playerChoice )
 {
+  let computerChoice = computerPlay();
   var player, computerText;
   let lowerPlayer = playerChoice.toLowerCase();
 
@@ -59,11 +60,51 @@ function playRound(playerChoice, computerChoice)
   }
   else if( player == ((computerChoice + 1) % 3))
   {
+    playerScore = playerScore + 1;
     return("Player wins!  Player: "+lowerPlayer+"  Comp: "+ computerText  + '\n' );
   }
   else
   {
+    computerScore = computerScore + 1;
     return("Computer Wins  Player: "+lowerPlayer+"  Comp: "+ computerText + '\n' );
   }
 }
 
+const rockButton = document.querySelector('#RockButton');
+const paperButton = document.querySelector('#PaperButton');
+const scissorsButton = document.querySelector('#ScissorsButton');
+//var htmlPlayerScore = document.getElementById("#playerScore");
+//var htmlComputerScore = document.getElementById("#computerScore");
+var playerScore = 0;
+var computerScore = 0;
+
+rockButton.addEventListener('click', Rock);
+paperButton.addEventListener('click', Paper);
+scissorsButton.addEventListener('click', Scissors);
+
+function Rock()
+{
+  console.log(playRound("rock"));
+  console.log(playerScore + "   "+computerScore);
+  PrintScore();
+}
+
+function Paper()
+{
+  console.log(playRound("Paper"));
+  console.log(playerScore + "   "+computerScore);
+  PrintScore();
+}
+
+function Scissors()
+{
+  console.log(playRound("Scissors"));
+  console.log(playerScore + "   "+computerScore);
+  PrintScore();
+}
+
+function PrintScore()
+{
+  document.getElementById("computerScore").innerHTML = "Computer Score: " + computerScore.toString();
+  document.getElementById("playerScore").innerHTML = "Player Score: " + playerScore.toString();
+}
