@@ -13,11 +13,11 @@ function playGame(){
 //return a number at random that describes the comp choice
 function computerPlay()
 {
-  return Math.floor( (Math.random() * 10) % 3 );
+  return Math.floor( (Math.random() * 100) % 3 );
 }
 
 //plays a round of rock paper scissors 
-function playRound(playerChoice )
+function playRound( playerChoice )
 {
   let computerChoice = computerPlay();
   var player, computerText;
@@ -28,12 +28,15 @@ function playRound(playerChoice )
   {
     case "rock":
       player = 0;
+      document.getElementById("playerPic").src="rock.png";
       break;
     case "paper":
       player = 1;
+      document.getElementById("playerPic").src="paper.png";
       break;
     case "scissors":
       player = 2;
+      document.getElementById("playerPic").src="scissors.png";
       break;
     default:
       console.log('error in user input');
@@ -44,13 +47,16 @@ function playRound(playerChoice )
   if( computerChoice == 0)
   {
     computerText = 'rock';
+    document.getElementById("compPic").src="rock.png";
   }
   else if( computerChoice == 1 )
   {
     computerText = 'paper';
+    document.getElementById("compPic").src="paper.png";
   }
   else{
     computerText = 'scissors';
+    document.getElementById("compPic").src="scissors.png";
   }
 
   //calculate who wins and output to console
@@ -108,3 +114,5 @@ function PrintScore()
   document.getElementById("computerScore").innerHTML = "Computer Score: " + computerScore.toString();
   document.getElementById("playerScore").innerHTML = "Player Score: " + playerScore.toString();
 }
+
+

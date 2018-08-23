@@ -1,3 +1,25 @@
-.body{
-  background: gray;
+body {
+  background: grey;
+  margin: auto;
+  width: 50%;
+  padding: 150px;
+  text-align: center;
+}
+
+#score{
+  color: whitesmoke;
+}
+
+#RockButton, #PaperButton, #ScissorsButton{
+  border-radius: 5px;
+    border: 2px solid #f2f2f2;
+    height: 25px;
+    width: 70px;
+    margin: 25px;
+}
+
+#score, #playingTable{
+  font-family: FANTASY;
+  font-size: 30px;
+  color: whitesmoke;
 }
