@@ -71,3 +71,25 @@ buttons.forEach((button) => {
         alert(button.id);
     });
 });
+
+let user = {
+    name:"John",
+    surname: "Smith",
+}
+
+console.log(user.name);
+
+user.name = "Pete";
+
+console.log(user.name);
+
+delete user.name;
+
+console.log(user.name);
+
+function reverseString(s) {
+    console.log(join(reverse(split(s))));
+}
+
+//button.innerHTML(toString() number);
+//document.getElementById(btn).innerHTML = (toString(num));
