@@ -6,8 +6,16 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
+<br>
+
+<p>
+  <% if @article.image.exists? %>
+      <%= image_tag @article.image.url(:medium) %><br/>
+  <% end %>
+</p>
 
 <br>
+
 <p><%= @article.body %></p>
 
 <br><br>
